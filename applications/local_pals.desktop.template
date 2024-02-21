@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Forward ${CONFIG_NAME} to ${SERVER_IP}
+Comment=Forwards local traffic to TCP ports ${TCP_PORT_LIST} and UDP ports ${UDP_PORT_LIST} to a local server ${SERVER_IP}
+Exec=forward_local_ports.sh -t ${TCP_PORT_LIST} -u ${UDP_PORT_LIST} -s ${SERVER_IP}
+Icon=${ICON_ENABLE}
+Type=Application
+Terminal=false
+Categories=Utility; 
+
+[Desktop Entry]
+Name=Disable ${CONFIG_NAME} Port Forwarding
+Comment=Disables forwarding local traffic to TCP ports ${TCP_PORT_LIST} and UDP ports ${UDP_PORT_LIST}
+Exec=forward_local_ports.sh -t ${TCP_PORT_LIST} -u ${UDP_PORT_LIST} -r
+Icon=${ICON_DISABLE}
+Type=Application
+Terminal=false
+Categories=Utility; 
